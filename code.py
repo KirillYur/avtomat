@@ -132,7 +132,7 @@ Jb=Bb/12*delta**3
 tb=(M.pi*dp)/z2
 betta=90-betau
 bettarad=betta*M.pi/180
-kb=((12*(m-1)*Hb*Eb*Jb*M.cos(bettarad)*M.cos(bettarad)*l2)/(m*tb*E*Jx))/10**11
+kb=((12*(m-1)*Hb*Eb*Jb*M.cos(bettarad)*M.cos(bettarad)*l2)/(m*tb*E*Jx))/10**12
 st.write(""" Коэффициент жесткости бандажа: """)
 st.write(""" kb = """ + str(kb))
 nub=(Bb*10**-3*delta*10**-3*tb*ro)/(Fx*l2*ro)
