@@ -136,12 +136,13 @@ kb=(12*(m-1)*Hb*Eb*Jb*M.cos(bettarad)*M.cos(bettarad)*l2)/(m*tb*E*Jx)
 st.write(""" Коэффициент жесткости бандажа: """)
 st.write(""" kb = """ + str(kb))
 nub=(Bb*10**-3*delta*10**-3*tb*ro)/(Fx*l2*ro)
+st.write(str(nub))
 if 0<nub<=0.04:
  delta_a1 = nub/0.04
  A1_0 = 2e-9*kb**6-3e-7*kb**5+2e-5*kb**4-0.0005*kb**3+0.0081*kb**2-0.0078*kb-6.2302
  A1_004 = -4e-8*kb**6+3e-5*kb**5-0.0001*kb**4+0.0018*kb**3-0.0105*kb**2+0.0754*kb+5.6671
  A_1 = A1_004 + delta_a1*(A1_0-A1_004)
-print(A_1)
+st.write(str(A_1))
 #elif 0.04 < nub <= 0.1
 #ksi1 = -1.3855 * T_ ** 2 + 2.00774 * T_ + 0.0321
 #elif 0.1 < nub<= 0.2:
