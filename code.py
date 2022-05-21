@@ -275,9 +275,9 @@ st.write("""phi2 =""" + str('{:.5}'.format(phi_2)))
 st.write("""phi3 =""" + str('{:.5}'.format(phi_3)))
 # Сделать график!!!!!!!!!!!!! 
 
-fstA0=phi1*f1
-fstB0=phi2*f1
-fstA1=phi3*f1
+fstA0=phi_1*f1
+fstB0=phi_2*f1
+fstA1=phi_3*f1
 st.write(""" fstA0 = """ + str('{:.5}'.format(fstA0)))
 st.write(""" fstB0 = """ + str('{:.5}'.format(fstB0)))
 st.write(""" fstA1 = """ + str('{:.5}'.format(fstA1)))
