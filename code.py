@@ -106,9 +106,8 @@ y_axis_label='Поправочный коэффициент')
 
 fig.line(x_list, y_list , line_width=3)
 st.bokeh_chart(fig, use_container_width=True)
-ksi=0.00000002*(lyambda/10)**6+0.0000003*(lyambda/10)**5-0.00003*(lyambda/10)**4-(0.0007*(lyambda/10)**3)+0.0062*(lyambda/10)**2+0.0451*(lyambda/10)+0.7891
-#st.write(""" ksi = """ + str(ksi))
-#st.write(""" ksi = """ + str(ksi))
+ksi=0.00000002*(lyambda/10)**6+0.0000003*(lyambda/10)**5-0.00003*(lyambda/10)**4-(0.0007*(lyambda/10)**3)+0.0062*(lyambda/10)**2+0.0451*(lyambda/10)+0.71
+
 st.write(""" # """)
 st.write("# Определение собственной частоты колебаний пакета лопаток в статических условиях")
 st.write(""" # """)
@@ -273,7 +272,6 @@ st.bokeh_chart(fig, use_container_width=True)
 st.write("""phiA0 =""" + str('{:.5}'.format(phi_3)))
 st.write("""phiB0 =""" + str('{:.5}'.format(phi_2)))
 st.write("""phiA1 =""" + str('{:.5}'.format(phi_1)))
-# Сделать график!!!!!!!!!!!!! 
 
 fstA0=phi_3*f1
 fstB0=phi_2*f1
@@ -299,7 +297,7 @@ k4 = 4
 k5 = 5
 k6 = 6
 k7 = 7
-x1 = np.linspace(0, 300, 300)
+x1 = np.linspace(0, 65, 65)
 y1 = k1*x1
 y2 = k2*x1
 y3 = k3*x1
