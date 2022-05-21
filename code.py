@@ -294,7 +294,19 @@ st.write("""# Вибрационная диаграмма лопаточного
 
 x1 = np.linspace(0, 50, 50)
 y1 = (fstA0**2+B*x1**2)**0.5
-y2 = (fstA1**2+B*n**2)**0.5
+y2 = (fstA1**2+B*x1**2)**0.5
 fig, ax = plt.subplots()
 ax.plot(x1, y1, y2)
 st.pyplot(fig)
+
+x1 = np.linspace(0, 50, 50)
+y1 = (fstA0**2+B*x1**2)**0.5
+y2 = (fstA1**2+B*x1**2)**0.5
+p1 = figure(
+     title='simple line example',
+     x_axis_label='x',
+     y_axis_label='y')
+
+p1.line(x1, y1, y2 legend_label='Trend', line_width=2)
+
+st.bokeh_chart(p1, use_container_width=True)
