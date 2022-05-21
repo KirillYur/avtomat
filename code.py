@@ -327,7 +327,7 @@ p2.line(x1, f_max, legend_label='Trend', line_width=2)
 st.bokeh_chart(p2, use_container_width=True)
 k = 2
 k = st.slider('Введите кратность', min_value=2, max_value=7, step=1, value=k)
-n_res_max = (1.04*fstA0)/(k**2-(1.04**2)*B)**0.5
-n_res_min = (0.96*fstA0)/(k**2-(0.96**2)*B)**0.5
+n_res_max = ((1.04*fstA0)/(k**2-(1.04**2)*B)**0.5)+250
+n_res_min = ((0.96*fstA0)/(k**2-(0.96**2)*B)**0.5)+250
 st.write(""" Максимальная резонансная частота = """ + str('{:.6}'.format(n_res_max)))
 st.write(""" Минимальная резонансная частота = """ + str('{:.6}'.format(n_res_min)))
