@@ -307,8 +307,8 @@ y4 = k4*x1
 y5 = k5*x1
 y6 = k6*x1
 y7 = k7*x1
-f_max = (1+0.04)*(fstA0**2+B*x1**2)**0.5
-f_min = (1-0.04)*(fstA0**2+B*x1**2)**0.5
+f_max = (1+0.04)*(fstA0**2+B*n**2)**0.5
+f_min = (1-0.04)*(fstA0**2+B*n**2)**0.5
 
 p2 = figure(
      title='simple line example',
