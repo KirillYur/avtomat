@@ -307,13 +307,6 @@ y4 = k4*x1
 y5 = k5*x1
 y6 = k6*x1
 y7 = k7*x1
-n1 = 65.0
-
-#y1 = (fstA0**2+B*x1**2)**0.5
-#y2 = (fstA1**2+B*x1**2)**0.5
-fig, ax = plt.subplots()
-ax.plot(x1,y1, y2, y3, y4, y5, y6, y7)
-st.pyplot(fig)
 f_max = (1+0.04)*(fstA0**2+B*x1**2)**0.5
 f_min = (1-0.04)*(fstA0**2+B*x1**2)**0.5
 
@@ -332,5 +325,9 @@ p2.line(x1, y7, legend_label='Trend', line_width=2, line_color = "violet")
 p2.line(x1, f_min, legend_label='Trend', line_width=2)
 p2.line(x1, f_max, legend_label='Trend', line_width=2)
 st.bokeh_chart(p2, use_container_width=True)
+k = 1
+k = st.slider('Введите кратность', min_value=0, max_value=7, step=1, value=k)
 n_res_max = (1.04*fstA0)/(k**2-(1.04**2)*B)**0.5
-n_res_max = (1.04*fstA0)/(k**2-(1.04**2)*B)**0.5
+n_res_min = (0.96*fstA0)/(k**2-(0.96**2)*B)**0.5
+st.write(""" Максимальная резонансная частота = """ + n_res_max)
+st.write(""" Минимальная резонансная частота = """ + n_res_min)
