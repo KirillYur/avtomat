@@ -332,3 +332,5 @@ p2.line(x1, y7, legend_label='Trend', line_width=2, line_color = "violet")
 p2.line(x1, f_min, legend_label='Trend', line_width=2)
 p2.line(x1, f_max, legend_label='Trend', line_width=2)
 st.bokeh_chart(p2, use_container_width=True)
+n_res_max = (1.04*fstA0)/(k**2-(1.04**2)*B)**0.5
+n_res_max = (1.04*fstA0)/(k**2-(1.04**2)*B)**0.5
