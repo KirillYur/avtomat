@@ -292,11 +292,11 @@ st.write(""" fdin2 = """ + str('{:.6}'.format(fdin2)))
 st.write(""" fdin3 = """ + str('{:.6}'.format(fdin3)))
 st.write("""# Вибрационная диаграмма лопаточного аппарата""")
 
-x1 = np.linspace(0, 50, 50)
+x1 = np.linspace(0, n, 50)
 y1 = (fstA0**2+B*x1**2)**0.5
 y2 = (fstA1**2+B*x1**2)**0.5
 fig, ax = plt.subplots()
-ax.plot(x1, y2)
+ax.plot(x1,y1, y2)
 st.pyplot(fig)
 
 
