@@ -312,8 +312,8 @@ f_min = (1-0.04)*(fstA0**2+B*x1**2)**0.5
 
 p2 = figure(
      title='simple line example',
-     x_axis_label='fд, Гц',
-     y_axis_label='n, с^-1')
+     x_axis_label='n, с^-1',
+     y_axis_label='fд, Гц')
 
 p2.line(x1, y1, legend_label='Trend', line_width=2, line_color = "pink")
 p2.line(x1, y2, legend_label='Trend', line_width=2, line_color = "green")
