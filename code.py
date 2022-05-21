@@ -308,7 +308,7 @@ y5 = k5*x1
 y6 = k6*x1
 y7 = k7*x1
 n1 = 65.0
-yk = k*n1
+
 #y1 = (fstA0**2+B*x1**2)**0.5
 #y2 = (fstA1**2+B*x1**2)**0.5
 fig, ax = plt.subplots()
