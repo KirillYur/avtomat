@@ -270,14 +270,14 @@ fig.line(coord_x2, coord_y2, line_width=3, line_color="purple")
 #fig.line(coord_x1, coord_y1, line_width=3, line_color="green")
 #fig.line(coord_x3, coord_y3, line_width=3, line_color="pink")
 st.bokeh_chart(fig, use_container_width=True)
-st.write("""phi1 =""" + str('{:.5}'.format(phi_1)))
-st.write("""phi2 =""" + str('{:.5}'.format(phi_2)))
-st.write("""phi3 =""" + str('{:.5}'.format(phi_3)))
+st.write("""phiA0 =""" + str('{:.5}'.format(phi_3)))
+st.write("""phiB0 =""" + str('{:.5}'.format(phi_2)))
+st.write("""phiA1 =""" + str('{:.5}'.format(phi_1)))
 # Сделать график!!!!!!!!!!!!! 
 
-fstA0=phi_1*f1
+fstA0=phi_3*f1
 fstB0=phi_2*f1
-fstA1=phi_3*f1
+fstA1=phi_1*f1
 st.write(""" fstA0 = """ + str('{:.5}'.format(fstA0)))
 st.write(""" fstB0 = """ + str('{:.5}'.format(fstB0)))
 st.write(""" fstA1 = """ + str('{:.5}'.format(fstA1)))
