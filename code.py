@@ -314,3 +314,11 @@ ax.plot(x1,y1, y2, y3, y4, y5, y6, y7)
 st.pyplot(fig)
 
 
+p2 = figure(
+     title='simple line example',
+     x_axis_label='x',
+     y_axis_label='y')
+
+p2.line(x1, y1, y2, y3, y4, y5, y6, y7, legend_label='Trend', line_width=2)
+
+st.bokeh_chart(p2, use_container_width=True)
