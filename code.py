@@ -291,13 +291,26 @@ st.write(""" fdin1 = """ + str('{:.6}'.format(fdin1)))
 st.write(""" fdin2 = """ + str('{:.6}'.format(fdin2)))
 st.write(""" fdin3 = """ + str('{:.6}'.format(fdin3)))
 st.write("""# Вибрационная диаграмма лопаточного аппарата""")
-k = [1, 2, 3, 4, 5, 6, 7]
+k1 = 1
+k2 = 2
+k3 = 3
+k4 = 4
+k5 = 5
+k6 = 6
+k7 = 7
 x1 = np.linspace(0, 65, 65)
-y1 = k*x1
+y1 = k1*x1
+y2 = k2*x1
+y3 = k3*x1
+y4 = k4*x1
+y5 = k5*x1
+y6 = k6*x1
+y7 = k7*x1
+
 #y1 = (fstA0**2+B*x1**2)**0.5
 #y2 = (fstA1**2+B*x1**2)**0.5
 fig, ax = plt.subplots()
-ax.plot(x1,y1)
+ax.plot(x1,y1, y2, y3, y4, y5, y6, y7)
 st.pyplot(fig)
 
 
