@@ -321,6 +321,6 @@ p2 = figure(
      x_axis_label='x',
      y_axis_label='y')
 
-p2.line(n1, yk, legend_label='Trend', line_width=2)
+p2.line(x1, x1, x1, x1, x1, x1, x1, y1, y2, y3, y4, y5, y6, y7, legend_label='Trend', line_width=2)
 
 st.bokeh_chart(p2, use_container_width=True)
