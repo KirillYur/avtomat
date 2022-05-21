@@ -114,13 +114,13 @@ st.write("# Определение собственной частоты кол�
 st.write(""" # """)
 st.write(""" Действительная частота колебаний fst1: """)
 f1=ksi*(m1/l2**2)*(E*Jx/(ro*Fx))**0.5
-st.write(""" f1 = """ + str('{:.4}'.format(f1)) + """ Гц """)
+st.write(""" f1 = """ + str('{:.6}'.format(f1)) + """ Гц """)
 st.write(""" Действительная частота колебаний fst2: """)
 f2=1*(m2/l2**2)*(E*Jx/(ro*Fx))**0.5
-st.write(""" f2 = """ + str('{:.4}'.format(f2)) + """ Гц """)
+st.write(""" f2 = """ + str('{:.6}'.format(f2)) + """ Гц """)
 st.write(""" Действительная частота колебаний fst3: """)
 f3=1*(m3/l2**2)*(E*Jx/(ro*Fx))**0.5
-st.write(""" f3 = """ + str('{:.4}'.format(f3)) + """ Гц """)
+st.write(""" f3 = """ + str('{:.6}'.format(f3)) + """ Гц """)
 
 st.write(""" # """)
 st.write("# Определение собственной частоты колебаний пакета лопаток в статических условиях")
@@ -136,7 +136,7 @@ kb=((12*(m-1)*Hb*Eb*Jb*M.cos(bettarad)*M.cos(bettarad)*l2)/(m*tb*E*Jx))/10**12
 st.write(""" Коэффициент жесткости бандажа: """)
 st.write(""" kb = """ + str('{:.4}'.format(kb)))
 nub=(Bb*10**-3*delta*10**-3*tb*ro)/(Fx*l2*ro)
-st.write(""" Относительная масса бандажа """ + str('{:.6}'.format(nub)))
+st.write(""" Относительная масса бандажа nu_b =""" + str('{:.5}'.format(nub)))
 
 #phi1
 if 0<nub<=0.04:
@@ -185,9 +185,9 @@ elif 0.2<nub<0.3:
  phi_3 = C_02 + delta_c3*(C_02-C_03)
 #st.write(str(A1_0))
 #st.write(str(A1_004))
-st.write("""phi1 =""" + str('{:.6}'.format(phi_1)))
-st.write("""phi2 =""" + str('{:.6}'.format(phi_2)))
-st.write("""phi3 =""" + str('{:.6}'.format(phi_3)))
+st.write("""phi1 =""" + str('{:.5}'.format(phi_1)))
+st.write("""phi2 =""" + str('{:.5}'.format(phi_2)))
+st.write("""phi3 =""" + str('{:.5}'.format(phi_3)))
 #elif 0.04 < nub <= 0.1
 #ksi1 = -1.3855 * T_ ** 2 + 2.00774 * T_ + 0.0321
 #elif 0.1 < nub<= 0.2:
@@ -277,19 +277,19 @@ fiA1=6.39
 fstA0=fiA0*f1
 fstB0=fiB0*f1
 fstA1=fiA1*f1
-st.write(""" fstA0 = """ + str(fstA0))
-st.write(""" fstB0 = """ + str(fstB0))
-st.write(""" fstA1 = """ + str(fstA1))
+st.write(""" fstA0 = """ + str('{:.5}'.format(fstA0)))
+st.write(""" fstB0 = """ + str('{:.5}'.format(fstB0)))
+st.write(""" fstA1 = """ + str('{:.5}'.format(fstA1)))
 
 
 
 st.write("""# Влияние вращения ротора на собственные частоты колебаний лопаток""")
 B=0.5*(dsr/l2-1)*(0.5*nub)/((1/3)*nub)+M.sin(betta*M.pi/180)*M.sin(betta*M.pi/180)
-st.write(""" B = """ + str(B))
+st.write(""" B = """ + str('{:.4}'.format(B)))
 fdin1=(fstA0**2+B*n**2)**0.5
 fdin2=(fstB0**2+B*n**2)**0.5
 fdin3=(fstA1**2+B*n**2)**0.5
-st.write(""" fdin1 = """ + str(fdin1))
-st.write(""" fdin2 = """ + str(fdin2))
-st.write(""" fdin3 = """ + str(fdin3))
+st.write(""" fdin1 = """ + str('{:.6}'.format(fdin1)))
+st.write(""" fdin2 = """ + str('{:.6}'.format(fdin2)))
+st.write(""" fdin3 = """ + str('{:.6}'.format(fdin3)))
 st.write("""# Вибрационная диаграмма лопаточного аппарата""")
