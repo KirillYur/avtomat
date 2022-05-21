@@ -185,9 +185,9 @@ elif 0.2<nub<0.3:
  phi_3 = C_02 + delta_c3*(C_02-C_03)
 #st.write(str(A1_0))
 #st.write(str(A1_004))
-st.write("""phi1 =""" + str('{:.5}'.format(phi_1)))
-st.write("""phi2 =""" + str('{:.5}'.format(phi_2)))
-st.write("""phi3 =""" + str('{:.5}'.format(phi_3)))
+#st.write("""phi1 =""" + str('{:.5}'.format(phi_1)))
+#st.write("""phi2 =""" + str('{:.5}'.format(phi_2)))
+#st.write("""phi3 =""" + str('{:.5}'.format(phi_3)))
 #elif 0.04 < nub <= 0.1
 #ksi1 = -1.3855 * T_ ** 2 + 2.00774 * T_ + 0.0321
 #elif 0.1 < nub<= 0.2:
@@ -270,19 +270,17 @@ fig.line(coord_x2, coord_y2, line_width=3, line_color="purple")
 #fig.line(coord_x1, coord_y1, line_width=3, line_color="green")
 #fig.line(coord_x3, coord_y3, line_width=3, line_color="pink")
 st.bokeh_chart(fig, use_container_width=True)
+st.write("""phi1 =""" + str('{:.5}'.format(phi_1)))
+st.write("""phi2 =""" + str('{:.5}'.format(phi_2)))
+st.write("""phi3 =""" + str('{:.5}'.format(phi_3)))
 # Сделать график!!!!!!!!!!!!! 
-fiA0=1.14
-fiB0=4.76
-fiA1=6.39
-fstA0=fiA0*f1
-fstB0=fiB0*f1
-fstA1=fiA1*f1
+
+fstA0=phi1*f1
+fstB0=phi2*f1
+fstA1=phi3*f1
 st.write(""" fstA0 = """ + str('{:.5}'.format(fstA0)))
 st.write(""" fstB0 = """ + str('{:.5}'.format(fstB0)))
 st.write(""" fstA1 = """ + str('{:.5}'.format(fstA1)))
-
-
-
 st.write("""# Влияние вращения ротора на собственные частоты колебаний лопаток""")
 B=0.5*(dsr/l2-1)*(0.5*nub)/((1/3)*nub)+M.sin(betta*M.pi/180)*M.sin(betta*M.pi/180)
 st.write(""" B = """ + str('{:.4}'.format(B)))
