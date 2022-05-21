@@ -165,6 +165,8 @@ if 0<nub<=0.3:
 #st.write(str(A1_0))
 #st.write(str(A1_004))
 st.write(str(phi_1))
+st.write(str(phi_2))
+
 #elif 0.04 < nub <= 0.1
 #ksi1 = -1.3855 * T_ ** 2 + 2.00774 * T_ + 0.0321
 #elif 0.1 < nub<= 0.2:
