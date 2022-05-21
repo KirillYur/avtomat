@@ -314,7 +314,8 @@ n1 = 65.0
 fig, ax = plt.subplots()
 ax.plot(x1,y1, y2, y3, y4, y5, y6, y7)
 st.pyplot(fig)
-
+f_max = (1+0.04)*(fstA0**2+B*x1**2)**0.5
+f_min = (1-0.04)*(fstA0**2+B*x1**2)**0.5
 
 p2 = figure(
      title='simple line example',
@@ -328,5 +329,5 @@ p2.line(x1, y4, legend_label='Trend', line_width=2)
 p2.line(x1, y5, legend_label='Trend', line_width=2)
 p2.line(x1, y6, legend_label='Trend', line_width=2)
 p2.line(x1, y7, legend_label='Trend', line_width=2)
-
+p2.line(x1, f_max, legend_label='Trend', line_width=2)
 st.bokeh_chart(p2, use_container_width=True)
